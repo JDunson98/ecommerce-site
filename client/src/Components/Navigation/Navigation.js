@@ -1,18 +1,26 @@
 import React from 'react';
 import './Navigation.css';
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from 'react-router-dom';
+
 const Navigation = () => {
     return (
-        <div className='nav-container'>
-           <ul>
-            <li><a>Products</a></li>
-            <li>Listings</li>
-            <li>About Us</li>
-            <li>Support</li>
-            <li>Sign In</li>
-           </ul>
-        </div>
-    )
+        <Router>
+            <div className='nav-container'>
+            <ul>
+                <li><Link to='/'>All Products</Link></li>
+                <li><Link to='/categories'>Categories</Link></li>
+                <li><Link to='/about'>About Us</Link></li>
+                <li><Link to='/support'>Support</Link></li>
+            </ul>
+            </div>
+        </Router>
+        )
 }
 
 export default Navigation;
